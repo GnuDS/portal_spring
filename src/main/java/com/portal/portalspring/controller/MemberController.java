@@ -31,9 +31,11 @@ public class MemberController {
     public String create(MemberForm form) {
         Member member = new Member();
         member.setName(form.getName());
+        member.setRegId(form.getRegId());
 
         memberService.join(member);
-        log.info("회원 등록 완료 : {}", member.getName());
+        log.info("회원 등록 완료 : {}", member.getName(), member.getRegId());
+
         return "redirect:/members";
     }
 

@@ -1,10 +1,16 @@
 package com.portal.portalspring.domain;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Member {
 
-    // 시스템 저장하는 아이디
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    private Long regId;
 
     public Long getId() {
         return id;
@@ -20,5 +26,13 @@ public class Member {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getRegId() {
+        return regId;
+    }
+
+    public void setRegId(Long regId) {
+        this.regId = regId;
     }
 }

@@ -14,12 +14,14 @@
                 <tr>
                     <th>번호</th>
                     <th>이름</th>
+                    <th>등록번호</th>
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="member : ${members}">
                     <td th:text="${member.id}"></td>
                     <td th:text="${member.name}"></td>
+                    <td th:text="${member.regId}"></td>
                 </tr>
             </tbody>
         </table>
