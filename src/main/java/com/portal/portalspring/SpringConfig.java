@@ -1,5 +1,6 @@
 package com.portal.portalspring;
 
+import com.portal.portalspring.aop.TimeTraceAop;
 import com.portal.portalspring.repository.*;
 import com.portal.portalspring.service.MemberService;
 import jakarta.persistence.EntityManager;
@@ -23,6 +24,11 @@ public class SpringConfig {
         return new MemberService(memberRepository);
     }
 
+//    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    }
+//
 //    @Bean
 //    public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();

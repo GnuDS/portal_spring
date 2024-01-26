@@ -23,6 +23,9 @@ class MemberServiceIntegrationTest {
 
     @Test
     void 회원가입() {
+
+        long start = System.currentTimeMillis();
+
         // given
         Member member = new Member();
         member.setName("spring3");
@@ -33,6 +36,12 @@ class MemberServiceIntegrationTest {
         // then
         Member findMember = memberService.findOne(saveId).get();
         assertThat(member.getName()).isEqualTo(findMember.getName());
+
+        long finish = System.currentTimeMillis();
+        long timestamp = finish - start;
+
+        System.out.println("join " + timestamp + " ms");
+
     }
 
     @Test

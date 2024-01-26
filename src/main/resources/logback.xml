@@ -1,0 +1,10 @@
+<configuration>
+    <appender name="logPattern" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%-5level %d{yyyy-MM-dd HH:mm:ss} %logger{36} [%method:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="info">
+        <appender-ref ref="logPattern" />
+    </root>
+</configuration>
